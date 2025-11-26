@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula</title>
+    <link rel="stylesheet" href="./src/css/matricula.css">
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link rel="stylesheet" href="./src/css/rodape.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend+Deca:wght@100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header class="cabecalho">
+        <a href="./index.html">
+             <img class="logo" src="./src/img/logo.png" alt="logo">
+        </a>
+       
+
+        <div class="navegacao">
+            <ul class="item">
+                <h3 class="tl">MATRÍCULA</h3>
+            </ul>
+        </div>
+    </header>
+
+   <main class="principal">
+<div class="card" id="form-card">
+    <h3 class="tit">Cadastro de Aluno</h3>
+
+    <input class="inf" type="text" id="nome" placeholder="Nome completo" required>
+
+    <select class="inf" id="idade">
+        <option value="">Selecione a idade</option>
+    </select>
+
+    <input class="inf" type="text" id="cpf" placeholder="CPF">
+    <input class="inf" type="text" id="telefone" placeholder="Telefone">
+
+   <select class="inf" id="sexo">
+    <option>Masculino</option>
+    <option>Feminino</option>
+    <option>Outro</option>
+</select>
+
+    <input class="inf" type="email" id="email" placeholder="Email">
+
+    <button onclick="validarCadastro()">Finalizar Cadastro</button>
+</div>
+
+<div id="cadastro-finalizado">
+    <div class="alerta">
+        <p class="cad">✅ Cadastro finalizado com sucesso!</p>
+        <button class="bo" onclick="mostrarCard()">OK</button>
+    </div>
+</div>
+
+<div id="card-info">
+    <button id="fechar-card" onclick="fecharCard()">❌</button>
+    
+    <p><strong class="dadot">🎯 Novo aluno:</strong></p>
+    <div class="dados" id="dados"></div>
+
+    <hr style="margin: 12px 0;">
+
+    <p><strong class="dadot">📌 Escolha seu Plano</strong></p>
+    <select class="inf" id="plano">
+    
+        <option value="Básico - R$99,00">Básico - R$99,00</option>
+        <option value="Plus - R$149,00">Plus - R$149,00</option>
+        <option value="Premium - R$229,00">Premium - R$229,00</option>
+    </select>
+
+    <p><strong class="dadoti">💳 Forma de Pagamento</strong></p>
+    <select class="inf" id="pagamento">
+
+        <option value="Cartão - 12x">Cartão - até 12x</option>
+        <option value="PIX - À vista">PIX - À vista</option>
+        <option value="Boleto - 6x">Boleto - até 6x</option>
+    </select>
+
+    <button onclick="finalizarPlano()">✅ Concluir Matrícula</button>
+</div>
+
+<div id="final-completo" style="display:none;" class="card2">
+     <h3 class="tit">✅ Matrícula Concluída!</h3>
+     <p id="resumo-final"></p>
+     <a href="./index.html">
+        <button class="bo">Voltar ao início</button>
+     </a>
+</div>
+
+<script>
+    // Preenche seleção de idade
+    const idadeSelect = document.getElementById("idade");
+    for (let i = 10; i <= 100; i++) {
+        idadeSelect.innerHTML += `<option value="${i}">${i}</option>`;
+    }
+
+    function validarCadastro() {
+        let valid = true;
+        const campos = ["nome", "idade", "cpf", "telefone", "sexo", "email"];
+
+        campos.forEach(id => {
+            const elem = document.getElementById(id);
+            if (!elem.value.trim()) {
+                elem.classList.add("error");
+                valid = false;
+            } else {
+                elem.classList.remove("error");
+            }
+        });
+
+        const email = document.getElementById("email").value;
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regexEmail.test(email)) {
+            document.getElementById("email").classList.add("error");
+            valid = false;
+        }
+
+        if (!valid) {
+            alert("⚠ Preencha todos os campos corretamente!");
+            return;
+        }
+
+        // Exibe popup
+        document.getElementById("cadastro-finalizado").style.display = "flex";
+    }
+
+    function mostrarCard() {
+        document.getElementById("cadastro-finalizado").style.display = "none";
+
+        const nome = document.getElementById("nome").value;
+        const idade = document.getElementById("idade").value;
+        const cpf = document.getElementById("cpf").value;
+        const telefone = document.getElementById("telefone").value;
+       const sexo = document.getElementById("sexo").value;
+        const email = document.getElementById("email").value;
+
+        // Salva no LocalStorage ✅
+        localStorage.setItem("aluno", JSON.stringify({
+            nome, idade, cpf, telefone, sexo, email
+        }));
+
+        const dados = `
+            <strong>${nome}</strong><br>
+            Idade: ${idade} anos<br>
+            CPF: ${cpf}<br>
+            Tel: ${telefone}<br>
+            Sexo: ${sexo}<br>
+            Email: ${email}
+        `;
+
+        document.getElementById("dados").innerHTML = dados;
+        document.getElementById("card-info").style.display = "block";
+
+        // ✅ Formulário é reiniciado
+        document.getElementById("form-card").reset ();
+        document.querySelectorAll("#form-card input, select").forEach(el => {
+            el.value = "";
+            el.classList.remove("error");
+        });
+    }
+
+    function fecharCard() {
+    document.getElementById("card-info").style.display = "none";
+}
+
+function mostrarCard() {
+    document.getElementById("cadastro-finalizado").style.display = "none";
+
+    const nome = document.getElementById("nome").value;
+    const idade = document.getElementById("idade").value;
+    const cpf = document.getElementById("cpf").value;
+    const telefone = document.getElementById("telefone").value;
+    const sexo = document.getElementById("sexo").value;
+    const email = document.getElementById("email").value;
+
+    // Salvar no localStorage
+    localStorage.setItem("aluno", JSON.stringify({
+        nome, idade, cpf, telefone, sexo, email
+    }));
+
+    const dados = `
+        <strong>${nome}</strong><br>
+        Idade: ${idade} anos<br>
+        CPF: ${cpf}<br>
+        Tel: ${telefone}<br>
+        Sexo: ${sexo}<br>
+        Email: ${email}
+    `;
+
+    document.getElementById("dados").innerHTML = dados;
+    document.getElementById("card-info").style.display = "block";
+}
+
+function finalizarPlano() {
+    const plano = document.getElementById("plano").value;
+    const pagamento = document.getElementById("pagamento").value;
+
+    if (!plano || !pagamento) {
+        alert("⚠ Selecione um plano e forma de pagamento!");
+        return;
+    }
+
+    const aluno = JSON.parse(localStorage.getItem("aluno"));
+
+    const resumo = `
+        ✅ Aluno: <strong>${aluno.nome}</strong><br>
+        📌 Plano: <strong>${plano}</strong><br>
+        💳 Pagamento: <strong>${pagamento}</strong>
+    `;
+
+    document.getElementById("resumo-final").innerHTML = resumo;
+
+    document.getElementById("card-info").style.display = "none";
+    document.getElementById("final-completo").style.display = "block";
+}
+
+</script>
+
+
+
+
+    
+        <section class="rodape">
+            <img class="logo" src="./src/img/logo.png" alt="">
+            <div class="funcionamento">
+                <h3 class="titulop">Horários de funcionamento</h3>
+                <div class="semana">
+                    <div class="segunda">
+                        <h4 class="dia">Segunda a Sexta-feira:</h4>
+                        <ul class="horario">
+                            <li class="hora">Abertura: 06:00</li>
+                            <li class="hora">Fechamento: 23:00</li>
+                        </ul>
+                </div>
+
+                    <div class="sabado">
+                        <h4 class="dia">Sábado</h4>
+                        <ul class="horario">
+                            <li class="hora">Abertura: 08:00</li>
+                            <li class="hora">Fechamento: 18:00</li>
+                        </ul>
+                </div>
+
+                    <div class="domingo">
+                        <h4 class="dia">Domingos e feriados:</h4>
+                        <ul class="horario">
+                            <li class="hora">Abertura: 09:00</li>
+                            <li class="hora">Fechamento: 14:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="icos">
+                <a href="https://www.instagram.com/worldfit_oficial" target="_blank">
+                    <img class="ico" src="./src/img/instagram (4).png" alt="Ícone do Instagram">
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

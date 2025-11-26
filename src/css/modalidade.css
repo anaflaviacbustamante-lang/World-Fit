@@ -1,0 +1,448 @@
+/* PRINCIPAL */
+
+.principal {
+    background-repeat: no-repeat;
+    width: 1910px;
+    height: 680px;
+    margin-top: 14px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    margin-top: 70px;
+}
+
+.imagem {
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #F25E12;
+
+}
+
+.frase1 {
+    text-align: left;
+    margin-left: 400px;
+}
+
+.titulo1 {
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.titulo2 {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;
+
+}
+
+.treinos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    width: 1910px;
+    background-color: #F25E12;
+    margin-top: 80px;
+    padding: 40px;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.tis {
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: aliceblue;
+}
+
+
+.mod {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+    max-width: 780px;
+    flex-wrap: wrap;
+}
+
+.mod1 {
+    position: relative;
+    width: 350px;
+    height: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #F25E12;
+}
+
+.imagem1 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/SHAPE.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem1 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem2 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/CROSS.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem2 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem3 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/HIIT.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem3 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem4 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/STRONG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem4 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.icones .icone {
+    height: 40px;
+    width: 40px;
+}
+
+.ic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+    margin-left: 18px;
+}
+
+.ic .ics {
+    font-size: 15px;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.inf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.infs {
+    font-size: 13px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;
+}
+
+.mod .texto {
+    text-align: center;
+    margin-top: 18px;
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;
+}
+
+.treino-coletivo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.mod-2 {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+    max-width: 1210px;
+    flex-wrap: wrap;
+}
+
+.mod2 {
+    position: relative;
+    width: 350px;
+    height: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #F25E12;
+}
+
+.mod-2 .texto {
+    text-align: center;
+    margin-top: 18px;
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;
+}
+
+
+.imagem5 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/dança.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem5 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem6 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/yoga.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem6 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem7 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/alongamento.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem7 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem8 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/ZUMBA.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem8 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem9 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/JIU\ JITSU.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem9 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.imagem10 {
+    width: 350px;
+    height: 400px;
+    background-image: url('../img/BIKE.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.imagem10 .nome {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.mod-1 {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+    max-width: 860px;
+    flex-wrap: wrap;
+}
+
+/* PRINCIPAL */
+
+.tit {
+    color: aliceblue;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Animação para entrada suave */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica no Título 1 */
+.titulo1 {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Aplica no Título 2 com pequeno atraso */
+.titulo2 {
+  opacity: 0;
+  animation: fadeInUp 1.4s ease-out forwards;
+}
+
+.titulop {
+    display: flex;
+    align-items: center; 
+    margin-left: 100px;
+    font-size: 25px;
+    margin-top: 20px;
+     font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+}

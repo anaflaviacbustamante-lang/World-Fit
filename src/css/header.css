@@ -1,0 +1,47 @@
+/* CABEÇALHO */
+
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
+.cabecalho .logo{
+    width: 250px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 180px;
+}
+
+.cabecalho .navegacao {
+    font-size: 20px;
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+    margin-right: 180px;
+     font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;   
+}
+
+.navegacao .item a {
+    position: relative;
+    text-decoration: none;
+}
+
+
+/* Linha animada */
+.navegacao .item a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Distância da linha */
+    width: 0;
+    height: 2px;
+    background-color: #F25E12; /* Cor da linha */
+    transition: width 0.3s ease;
+}
+
+/* Ao passar o mouse */
+.navegacao .item a:hover::after {
+    width: 100%;
+}
+/* CABEÇALHO */

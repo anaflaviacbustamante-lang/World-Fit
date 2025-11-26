@@ -1,0 +1,273 @@
+.navegacaos {
+    text-align: center;
+    background-color: #F25E12;
+    font-size: 20px;
+    gap: 50px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+/* Estilo base sem sublinhado */
+.navegacaos .tipo {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Linha invisível antes do hover */
+.navegacao .tl::after,
+.navegacaos .tipo::after {
+    content: "";
+    position: absolute;
+    bottom: -3px; /* Ajuste a distância da linha */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; /* Cor da linha */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+/* Animação ao passar o mouse */
+.navegacao .tl:hover::after,
+.navegacaos .tipo:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.tipo{
+    color: aliceblue;
+}
+
+.items {
+    display: inline-block;
+    list-style: none;
+    margin: 0 40px;
+    margin-top: 20px;
+}
+
+.divisao{
+text-align: center;
+  font-size: 1.8rem;
+  font-weight: 550;
+  margin: 40px 0 20px 0;
+  color: #333; /* opcional — ajuste conforme o tema */
+     font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.cards {
+    display: flex;
+    gap: 80px;
+    margin-top: 50px;
+    max-width: 1210px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 350px;
+}
+
+.card {
+    height: 480px;
+    width: 350px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    
+
+}
+
+.img{
+    width: 280px;
+    height: 290px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.categoria {
+    font-size: 1.1em;
+    color: #1a1a1a;
+    margin-top: 20px;
+      font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;   
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:  #F25E12;
+     font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;   
+}
+
+
+.btn-buy {
+    width: 100%;
+    padding: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+       font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.btn-buy:hover {
+    background-color: #333;
+}
+
+.suplemento{
+    margin-top: 150px;
+}
+
+.roupa{
+    margin-top: 150px;
+    
+}
+
+/* ==== CARRINHO LATERAL ==== */
+.carrinho-lateral {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 999;
+  border-radius: 30px;
+}
+
+.carrinho-lateral.ativo {
+  right: 0;
+}
+
+.carrinho-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.fechar-carrinho {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.item-carrinho img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.item-carrinho .info h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.carrinho-lateral .quantidade button {
+  background: #F25E12;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.carrinho-total {
+  border-top: 2px solid #eee;
+  padding-top: 10px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.btn-finalizar {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background:#F25E12;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+   font-family: "Lexend Deca", sans-serif;
+}
+  
+
+.btn-finalizar:hover {
+  background: #F25E12;
+  
+}
+
+/* === Pagamento === */
+.pagamento {
+  margin-top: 20px;
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+  display: none;
+}
+
+.pagamento h3 {
+  margin-bottom: 10px;
+}
+
+.btn-confirmar {
+  background: #F25E12;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background: #F25E12;
+}
+
+.carrinho{
+    font-family: "Winky Sans", sans-serif;
+}
+
+.total{
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.pag{
+   font-family: "Lexend Deca", sans-serif; 
+}
+

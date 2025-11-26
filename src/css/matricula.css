@@ -1,0 +1,207 @@
+.principal {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    /* Altura total menos o header */
+    display: flex;
+    flex-direction: column;
+    /* Organiza card e rodapé em coluna */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    gap: 20px;
+    /* Evita que o card encoste no rodapé */
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    height: 550px;
+    margin-top: 100px;
+}
+
+.tit{
+     font-family: "Winky Sans", sans-serif;
+     padding: 15px;
+     font-size: 20px;
+}
+
+
+.inf{
+    font-family: "Lexend Deca", sans-serif;
+    font-family: 15px;
+}
+
+
+button {
+    background-color: #D81919;
+    color: white;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+.error {
+    border: 2px solid red !important;
+}
+
+
+#cadastro-finalizado {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerta {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cad{
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.bo{
+    background-color: #D81919;
+    color: white;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 100px;
+    border-radius: 10px;
+    margin-top: 30px;
+
+}
+
+input,
+select {
+    background-color: white;
+    /* ✅ Cor do fundo do componente */
+    border: 2px solid #ff7b00;
+    /* Borda personalizada (opcional) */
+    color: #000000;
+    /* Cor do texto */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Quando clicar no campo (efeito de foco) */
+input:focus,
+select:focus {
+    background-color: #ffffff;
+    /* Muda o fundo ao clicar */
+    border-color: #ffaa44;
+    outline: none;
+}
+
+.dadot{
+    font-family: "Winky Sans", sans-serif;
+    font-size: 18px;
+}
+
+.dadoti{
+    font-family: "Winky Sans", sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.dados{
+     font-family: "Lexend Deca", sans-serif;
+     font-size: 14px;
+     margin-top: 10px;
+  
+}
+
+#fechar-card {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: transparent;
+    color: #ff4d4d;
+    font-size: 15px;
+    cursor: pointer;
+}
+#fechar-card:hover {
+    color: #ff0000;
+}
+
+.esc{
+    margin-bottom:50px ;
+}
+
+#card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente */
+    justify-content: center;
+    text-align: center;
+    gap: 8px; /* diminui o espaçamento vertical entre os elementos */
+    padding: 20px;
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    width: 400px;
+    height: 430px;
+    margin-bottom: 40px;
+}
+
+/* Ajusta os campos de entrada e selects */
+#card-info .inf {
+    width: 80%; /* deixa proporcional e centralizado */
+    margin: 4px 0; /* reduz ainda mais o espaçamento */
+    text-align: center;
+}
+
+/* Centraliza os títulos */
+#card-info p {
+    text-align: center;
+    margin: 6px 0;
+}
+
+/* Centraliza o botão e reduz o espaço ao redor */
+#card-info button {
+    margin-top: 10px;
+}
+
+.card2{
+     background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    height: 250px;
+    margin-top: 100px;
+}
+
+
+
